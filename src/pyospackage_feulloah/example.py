@@ -33,7 +33,18 @@ def add_numbers(a, b):
     5
 
     """
-    return a + b
+    c=0
+    for i in range(abs(a)):
+        if a > 0:
+            c+=1
+        else:
+            c-=1
+    for j in range(abs(b)):
+        if b > 0:
+            c+=1
+        else:
+            c-=1
+    return c
 
 
 def multiply_integers_slow(a,b):
@@ -66,5 +77,6 @@ def multiply_integers_slow(a,b):
         c_sign =-1
     c = 0
     for i in range(1, abs(b)+1):
-        c += abs(a)
+        # c += abs(a)
+        c = add_numbers(abs(a),c)
     return c_sign*c
