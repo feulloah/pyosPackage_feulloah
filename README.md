@@ -10,6 +10,8 @@ If you don't plan to publish to PyPI, you can remove them.*
 
 pyospackage_feulloah is a project that (describe what it does here).
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19635987.svg)](https://doi.org/10.5281/zenodo.19635987)
+
 ## Get started
 
 You can install this package into your preferred Python environment using pip:
