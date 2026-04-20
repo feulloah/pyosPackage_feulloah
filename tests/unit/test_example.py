@@ -7,7 +7,7 @@ is up to you. This test example provides a single test for the example.py
 module.
 """
 
-from pyospackage_fulloah.example import add_numbers, multiply_integers_slow
+from pyospackage_feulloah.example import add_numbers, multiply_integers_slow
 
 def test_add_numbers_pos():
     """
