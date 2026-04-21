@@ -69,12 +69,21 @@ def multiply_integers_slow(a,b):
     >>> multiply_integers_slow(-2, 7)
     -14
     """
+    if isinstance(a, bool) or isinstance(b, bool):
+        raise TypeError("Booleans are not accepted, please pass integers")
+    if not isinstance(a, int) or not isinstance(b, int):
+        raise TypeError(f"Both arguments must be integers, got {type(a).__name__} and {type(b).__name__}")
+    if a == 0 or b == 0:
+        return 0
+
+    MAX = 10_000
+    if abs(b) > MAX:
+        raise ValueError(f"b={b} exceeds the maximum allowed magnitude ({MAX}) for this slow implementation")
+
+
     a_sign = a>0
     b_sign = b>0
-    if a_sign == b_sign:
-        c_sign = 1
-    else:
-        c_sign =-1
+    c_sign = 1 if a_sign == b_sign else -1
     c = 0
     for i in range(1, abs(b)+1):
         # c += abs(a)
